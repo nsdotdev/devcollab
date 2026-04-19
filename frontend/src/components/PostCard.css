@@ -1,0 +1,250 @@
+.post-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.post-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-strong);
+}
+
+.post-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.post-card__author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex: 1;
+  min-width: 0;
+}
+
+.post-card__author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.post-card__author-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.post-card__author:hover .post-card__author-name {
+  color: var(--accent);
+}
+
+.post-card__author-bio {
+  font-size: 0.775rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.post-card__time {
+  font-size: 0.775rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.post-card__content {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-primary);
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin-bottom: 12px;
+}
+
+.post-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.post-card__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 12px;
+}
+
+.post-card__skill {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--bg-hover);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.post-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.post-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.post-card__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 0.825rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-decoration: none;
+}
+
+.post-card__btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.post-card__btn--like {
+  color: var(--text-muted);
+}
+
+.post-card__btn--like:hover {
+  background: #fef2f2;
+  color: var(--red);
+}
+
+.post-card__btn--like.liked {
+  color: var(--red);
+  background: var(--red-light);
+}
+
+.post-card__btn--delete {
+  color: var(--text-muted);
+}
+
+.post-card__btn--delete:hover {
+  background: var(--red-light);
+  color: var(--red);
+}
+
+.post-card__btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.post-card__btn--comment.active {
+  color: var(--accent);
+  background: var(--accent-light);
+}
+
+.post-card__btn--comment:hover {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+/* ── Comments ── */
+.post-card__comments {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: fadeIn 0.2s ease;
+}
+
+.post-card__comments-empty {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-align: center;
+  padding: 4px 0;
+}
+
+.post-card__comment {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.post-card__comment-body {
+  flex: 1;
+  background: var(--bg-hover);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  min-width: 0;
+}
+
+.post-card__comment-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-right: 6px;
+}
+
+.post-card__comment-time {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.post-card__comment-text {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-top: 2px;
+  word-break: break-word;
+}
+
+.post-card__comment-del {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  padding: 4px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+}
+.post-card__comment-del:hover { color: var(--red); background: var(--red-light); }
+
+.post-card__comment-form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.post-card__comment-input {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 0.875rem;
+  min-height: unset;
+}

@@ -1,0 +1,80 @@
+.user-card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.user-card__top {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.user-card__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.user-card__name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.user-card__email {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 5px;
+}
+
+.user-card__bio {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.user-card__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.user-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.user-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.825rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: var(--radius-sm);
+  transition: all 0.15s;
+}
+
+.user-card__link:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.user-card__profile-link {
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.user-card__profile-link:hover {
+  opacity: 0.75;
+}
