@@ -233,9 +233,14 @@
 @media (max-width: 768px) {
   .feed-layout {
     grid-template-columns: 1fr;
+    min-width: 0;
   }
   .feed-sidebar {
     display: none;
+  }
+  .feed-main {
+    min-width: 0;
+    max-width: 100%;
   }
 }
 
