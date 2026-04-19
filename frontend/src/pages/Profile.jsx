@@ -183,7 +183,7 @@ export default function Profile() {
                   <div className="profile-meta">
                     {profile.github && (
                       <a
-                        href={profile.github.startsWith('http') ? profile.github : `https://github.com/${profile.github}`}
+                        href={profile.github.startsWith('http') ? profile.github : `https://github.com/${profile.github.replace(/^(www\.)?github\.com\//, '')}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="profile-meta__link"

@@ -30,7 +30,7 @@ export default function UserCard({ user }) {
       <div className="user-card__footer">
         {user.github && (
           <a
-            href={user.github.startsWith('http') ? user.github : `https://github.com/${user.github}`}
+            href={user.github.startsWith('http') ? user.github : `https://github.com/${user.github.replace(/^(www\.)?github\.com\//, '')}`}
             target="_blank"
             rel="noopener noreferrer"
             className="user-card__link"

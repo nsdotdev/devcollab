@@ -20,6 +20,13 @@ function getInitials(name) {
   return (name || '?').split(' ').map((n) => n[0]).join('').toUpperCase().slice(0, 2);
 }
 
+function githubUrl(raw) {
+  if (!raw) return null;
+  if (raw.startsWith('http')) return raw;
+  const username = raw.replace(/^(www\.)?github\.com\//, '');
+  return `https://github.com/${username}`;
+}
+
 export default function PostCard({ post, onDelete }) {
   const { user } = useAuth();
   const toast = useToast();
@@ -148,7 +155,7 @@ export default function PostCard({ post, onDelete }) {
 
           {post.user?.github && (
             <a
-              href={post.user.github.startsWith('http') ? post.user.github : `https://github.com/${post.user.github}`}
+              href={githubUrl(post.user.github)}
               target="_blank"
               rel="noopener noreferrer"
               className="post-card__btn"

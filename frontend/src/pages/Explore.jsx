@@ -57,7 +57,7 @@ function UserCard({ u, currentUser, onFollow }) {
         <span>{u.followers?.length || 0} followers</span>
         {u.github && (
           <a
-            href={u.github.startsWith('http') ? u.github : `https://github.com/${u.github}`}
+            href={u.github.startsWith('http') ? u.github : `https://github.com/${u.github.replace(/^(www\.)?github\.com\//, '')}`}
             target="_blank"
             rel="noopener noreferrer"
             className="explore-user-card__github"
