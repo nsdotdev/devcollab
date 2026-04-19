@@ -238,8 +238,7 @@
 @media (max-width: 640px) {
   .navbar__links { display: none; }
   .navbar__auth { display: none; }
-  .navbar__username { display: none; }
+  .navbar__user { display: none; }
   .navbar__hamburger { display: flex; }
   .navbar__mobile-menu { display: flex; }
-  .navbar__user { padding: 6px; }
 }

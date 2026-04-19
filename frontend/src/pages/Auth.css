@@ -122,10 +122,7 @@
 }
 
 @media (max-width: 600px) {
-  .auth-container {
-    padding: 24px 20px;
-  }
-  .auth-form-grid {
-    grid-template-columns: 1fr;
-  }
+  .auth-container { padding: 24px 16px; border-radius: var(--radius-lg); }
+  .auth-form-grid { grid-template-columns: 1fr; }
+  .auth-demo { flex-direction: column; gap: 8px; align-items: flex-start; }
 }

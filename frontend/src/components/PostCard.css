@@ -248,3 +248,11 @@
   font-size: 0.875rem;
   min-height: unset;
 }
+
+@media (max-width: 480px) {
+  .post-card { padding: 14px; }
+  .post-card__footer { flex-wrap: wrap; gap: 8px; }
+  .post-card__comment-form { flex-wrap: wrap; }
+  .post-card__comment-input { min-width: 0; }
+  .post-card__comment-form .btn { width: 100%; justify-content: center; }
+}

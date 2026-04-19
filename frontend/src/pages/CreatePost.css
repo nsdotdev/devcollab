@@ -181,7 +181,8 @@
 }
 
 @media (max-width: 600px) {
-  .create-tips__grid {
-    grid-template-columns: 1fr;
-  }
+  .create-tips__grid { grid-template-columns: 1fr; }
+  .create-card { padding: 16px; }
+  .create-actions { flex-direction: column-reverse; }
+  .create-actions .btn { width: 100%; justify-content: center; }
 }

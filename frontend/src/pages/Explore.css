@@ -163,7 +163,9 @@
 }
 
 @media (max-width: 640px) {
+  .explore-header { flex-direction: column; gap: 8px; }
   .explore-grid { grid-template-columns: 1fr 1fr; }
+  .explore-user-card { padding: 14px; }
 }
 
 @media (max-width: 420px) {
