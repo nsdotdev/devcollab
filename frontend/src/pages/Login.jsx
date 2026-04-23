@@ -92,8 +92,9 @@ export default function Login() {
         <div className="auth-demo">
           <p className="auth-demo-label">Quick demo</p>
           <button
+            type="button"
             className="btn btn-ghost btn-sm"
-            onClick={() => setForm({ email: 'demo@devcollab.io', password: 'demo123' })}
+            onClick={() => setForm({ email: 'demo@devcollab.io', password: 'demo1234' })}
           >
             Fill demo credentials
           </button>
