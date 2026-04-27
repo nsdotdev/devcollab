@@ -224,13 +224,20 @@ export default function PostCard({ post, onDelete }) {
               <div className="avatar" style={{ width: 28, height: 28, fontSize: '0.7rem', flexShrink: 0 }}>
                 {getInitials(user.name)}
               </div>
-              <input
-                className="post-card__comment-input form-input"
-                placeholder="Write a comment…"
-                value={commentText}
-                onChange={(e) => setCommentText(e.target.value)}
-                maxLength={300}
-              />
+              <div className="post-card__comment-input-wrap">
+                <input
+                  className="post-card__comment-input form-input"
+                  placeholder="Write a comment…"
+                  value={commentText}
+                  onChange={(e) => setCommentText(e.target.value)}
+                  maxLength={300}
+                />
+                {commentText.length > 0 && (
+                  <span className={`post-card__comment-counter ${commentText.length >= 280 ? 'warn' : ''}`}>
+                    {300 - commentText.length}
+                  </span>
+                )}
+              </div>
               <button
                 type="submit"
                 className="btn btn-primary btn-sm"

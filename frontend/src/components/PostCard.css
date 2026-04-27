@@ -242,11 +242,33 @@
   margin-top: 4px;
 }
 
-.post-card__comment-input {
+.post-card__comment-input-wrap {
   flex: 1;
-  padding: 8px 12px;
+  position: relative;
+  min-width: 0;
+}
+
+.post-card__comment-input {
+  width: 100%;
+  padding: 8px 42px 8px 12px;
   font-size: 0.875rem;
   min-height: unset;
+}
+
+.post-card__comment-counter {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.post-card__comment-counter.warn {
+  color: var(--red);
+  font-weight: 600;
 }
 
 @media (max-width: 480px) {
